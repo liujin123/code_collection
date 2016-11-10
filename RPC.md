@@ -1,13 +1,13 @@
 RPC属于函数级别的远程调用，其多是通过HTTP传输数据，数据形式有XML、JSON、序列化数据等。
 ## server.py 
-···  from SimpleXMLRPCServer import SimpleXMLRPCServer
+'''  from SimpleXMLRPCServer import SimpleXMLRPCServer
   def add(x, y):
       return x + y
   if __name__ == '__main__':
       s = SimpleXMLRPCServer(('127.0.0.1', 8080))
       s.register_function(add)
       s.serve_forever() 
-··· 
+''' 
 ## client.py 
   from xmlrpclib import ServerProxy
   if __name__ == '__main__':
